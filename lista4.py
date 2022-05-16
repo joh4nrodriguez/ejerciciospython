@@ -1,8 +1,10 @@
 lista=[]
-for x in range (5):
-    valor=int(input("Ingrese un valor entero: "))
+for x in range(1,6):
+    valor=int(input("Ingrese los numeros de la lista: "))
     lista.append(valor)
-    if lista[x]<0:
-        print("No se aceptan numeros negativos.")
-        lista[x]=int(input("Por favor digite un numero positivo: "))
+    
+while valor <0:
+    print("¡Ha escrito un número negativo! Inténtelo de nuevo")
+    lista.remove(valor)
+    valor = int(input("Escriba un número positivo: "))
 print(lista)
